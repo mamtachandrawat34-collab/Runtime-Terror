@@ -10,30 +10,36 @@ const H = 800;
 let soundsReady = false;
 
 const sounds = {
+  intro: new Howl({
+    src: ["assets/intro.mp3"],
+    loop: true,
+    volume: 0.6
+  }),
+
   jalebi: new Howl({
-    src: ["asserts/jalebi sizzle.mp3"],
+    src: ["assets/jalebi sizzle.mp3"],
     loop: true,
     volume: 0.45
   }),
 
   dhol: new Howl({
-    src: ["asserts/dhol.mp3"],
+    src: ["assets/dhol.mp3"],
     loop: true,
     volume: 0.45
   }),
 
   batHit: new Howl({
-    src: ["asserts/bat hit.mp3"],
+    src: ["assets/bat hit.mp3"],
     volume: 0.8
   }),
 
   glass: new Howl({
-    src: ["asserts/glass shattered.mp3"],
+    src: ["assets/glass shattered.mp3"],
     volume: 0.8
   }),
 
   bubble: new Howl({
-    src: ["asserts/bubble pop.mp3"],
+    src: ["assets/bubble pop.mp3"],
     volume: 0.75
   })
 };
@@ -48,6 +54,7 @@ function unlockAudio() {
 }
 
 function stopLoopingSounds() {
+  sounds.intro.stop();
   sounds.jalebi.stop();
   sounds.dhol.stop();
 }
@@ -56,6 +63,10 @@ function toggleMusic(state) {
   if (!soundsReady) return;
 
   stopLoopingSounds();
+
+  if (state === "MENU") {
+    sounds.intro.play();
+  }
 
   if (state === "JALEBI") {
     sounds.jalebi.play();
