@@ -43,3 +43,4 @@ This is a simple **p5.js arcade game collection** built using JavaScript and HTM
 
   ## AUTHOR
   Lakshita Sharma
+  Mamta Chandrawat
