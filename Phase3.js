@@ -11,35 +11,36 @@ let soundsReady = false;
 
 const sounds = {
   jalebi: new Howl({
-    src: ["assets/jalebi sizzle.mp3"],
+    src: ["asserts/jalebi sizzle.mp3"],
     loop: true,
     volume: 0.45
   }),
 
   dhol: new Howl({
-    src: ["assets/dhol.mp3"],
+    src: ["asserts/dhol.mp3"],
     loop: true,
     volume: 0.45
   }),
 
   batHit: new Howl({
-    src: ["assets/bat hit.mp3"],
+    src: ["asserts/bat hit.mp3"],
     volume: 0.8
   }),
 
   glass: new Howl({
-    src: ["assets/glass shattered.mp3"],
+    src: ["asserts/glass shattered.mp3"],
     volume: 0.8
   }),
 
   bubble: new Howl({
-    src: ["assets/bubble pop.mp3"],
+    src: ["asserts/bubble pop.mp3"],
     volume: 0.75
   })
 };
 
 function unlockAudio() {
   if (!soundsReady) {
+    console.log('Unlocking audio');
     Howler.ctx.resume();
     soundsReady = true;
     toggleMusic(gameState);
@@ -69,7 +70,10 @@ function playSound(name) {
   if (!soundsReady) return;
 
   if (sounds[name]) {
+    console.log('Playing sound:', name);
     sounds[name].play();
+  } else {
+    console.log('Sound not found:', name);
   }
 }
 
