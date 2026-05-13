@@ -60,10 +60,11 @@ Use keys 1, 2, and 3 to select games
 2 - Play Cricket Gully Sixer  
 3 - Play Dhol Beat Festival  
 SPACE - Main action for Cricket and Dhol  
-
-##AUTHORS
-Lakshita Sharma
-Mamta Chandrawat
 Mouse Hold - Draw Jalebi  
 M - Back to menu  
 R - Restart current game
+
+##AUTHONS 
+Lakshita Sharma
+Mamta Chandrawat
+
