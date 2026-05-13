@@ -64,7 +64,7 @@ Mouse Hold - Draw Jalebi
 M - Back to menu  
 R - Restart current game
 
-##AUTHONS 
+##AUTHORS 
 Lakshita Sharma
 Mamta Chandrawat
 
